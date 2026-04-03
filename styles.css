@@ -11,14 +11,24 @@ img {
 
 /* Page styling */
 body {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color: #111111;
+    color: #fff;
     transition: all 2s;
+    font-family: 'Inter';
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
+    background-color: #fff;
     color: #333;
+}
+
+h1, h2 {
+    text-align: right;
+}
+
+h1 {
+    font-family: 'Instrument Serif';
+    font-size: 5em;
 }
 
 #container {
@@ -41,7 +51,7 @@ header {
     width: 1100px;
     height: 250px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
+    background-color: #fff;
     color: #333;
     overflow: hidden;
     display: grid;
@@ -50,7 +60,7 @@ header {
 
 #banner.switch {
     background-color: #333;
-    color: rgb(235, 235, 235);
+    color: #fff;
     transition: all 2s;
 }
 
@@ -62,9 +72,10 @@ main {
 
 main section {
     flex: 1;
-    border: 1px rgb(235, 235, 235) dashed;
-    margin: 0 .25em;
+    border: 1px #fff solid;
+    margin: 1em;
     padding: 1em;
+    font-size: 16px;
 }
 
 a {
@@ -85,12 +96,13 @@ section a {
     line-height: 1.1em;
     display: inline-block;
     padding: .5em;
-    color: orange;
+    color: #fff;
 }
 
 section a:hover {
-    background-color: orange;
-    color: #333;
+    /* background-color: orange; */
+    border-left: 2px #fff solid;
+    color: #ffffff;
 }
 
 section.switch a {
@@ -99,7 +111,7 @@ section.switch a {
 
 section.switch a:hover {
     background-color: #333;
-    color: rgb(235, 235, 235);
+    color: #fff;
 }
 
 button {
@@ -124,5 +136,5 @@ button.switch {
 
 button.switch:hover {
     background-color: #333;
-    color: rgb(235, 235, 235)
+    color: #fff;
 }
