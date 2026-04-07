@@ -1,6 +1,7 @@
 /* CSS Resets */
 * {
     box-sizing: border-box;
+    transition: all 2s;
 }
 
 img {
@@ -132,9 +133,11 @@ h2 {
     background-color: #fff;
 }
 
-#sticker-pink {
-    top: 40%; 
-    left: 55%;
+.sticker {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    object-fit: contain;
 }
 
 .sticker.switch {

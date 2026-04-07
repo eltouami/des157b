@@ -1,6 +1,7 @@
 (function() {
     'use strict';
 
+    // no button anymore, rest took inspiration from how template was set up
     const flip = document.querySelector('.basket-wrap');
     const body = document.querySelector('body');
     const banner = document.querySelector('#banner');
