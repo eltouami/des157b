@@ -11,7 +11,7 @@ img {
 
 /* Page styling */
 body {
-    background-color: #111111;
+    background-color: #111;
     color: #fff;
     transition: all 2s;
     font-family: 'Inter';
@@ -24,6 +24,8 @@ body.switch {
     color: #111;
 }
 
+
+/* stars and basket switch */
 .star {
     position: absolute;
     font-size: 1.4em;
@@ -31,6 +33,10 @@ body.switch {
     pointer-events: none;
     line-height: 1;
     z-index: 10;
+}
+
+.star.switch {
+    color: #111;
 }
 
 .basket-wrap {
@@ -42,6 +48,7 @@ body.switch {
     align-items: center;
     gap: 4px;
     z-index: 10;
+    cursor: pointer;
 }
 
 .basket {
@@ -55,8 +62,14 @@ body.switch {
 
 .basket-text:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
+
+.basket-wrap.switch .basket-text {
+    color: #111;
+}
+
+
+/* main container */
 
 #container {
     position: relative;
@@ -68,6 +81,7 @@ body.switch {
     padding-top: 1em;
 }
 
+/* header */
 header {
     position: relative;
     margin: 0 auto 2em auto;
@@ -79,7 +93,11 @@ header {
     right: 2em;
     text-align: right;
     pointer-events: none;
-    color: #fff;
+    /* color: #fff; */
+}
+
+body.switch #header-text {
+    color: #FF00A6;
 }
 
 h1 {
@@ -96,6 +114,7 @@ h2 {
     margin: 0;
 }
 
+/* banner area + overflow */
 #banner {
     position: relative;
     /* display: flex; */
@@ -104,13 +123,13 @@ h2 {
     /* margin: auto; */
     background-color: #111;
     overflow: visible;
+    transition: background-color 2s;
     /* display: grid;
 	place-items: center; */
 }
 
 #banner.switch {
     background-color: #fff;
-    transition: all 2s;
 }
 
 #sticker-pink {
@@ -118,6 +137,11 @@ h2 {
     left: 55%;
 }
 
+.sticker.switch {
+    filter: grayscale(100%);
+}
+
+/* main sections */
 main {
     display: flex;
     justify-content: space-evenly;
@@ -146,6 +170,25 @@ main section {
     text-transform: uppercase;
 }
 
+/* switch for text, might change for better class */
+body.switch .card-header {
+    background-color: #FF00A6;
+    color: #fff;
+}
+
+body.switch main section {
+    border-color: #FF00A6;
+}
+
+body.switch section a {
+    color: #FF00A6;
+}
+
+body.switch section a:hover {
+    border: 0.5px #FF00A6 solid;
+    color: #FF00A6;
+}
+
 section nav {
     padding: 0em 1em;
 }
@@ -172,10 +215,10 @@ section a {
 }
 
 section a:hover {
-    /* background-color: orange; */
-    border-left: 2px #fff solid;
+    /* border-left: 2px #fff solid; */
     color: #ffffff;
-    font-weight: 500;
+    border: 0.5px #fff solid;
+    font-weight: 450;
 }
 
 section.switch a {
@@ -183,31 +226,6 @@ section.switch a {
 }
 
 section.switch a:hover {
-    background-color: #111;
+    background-color: #fff;
     color: #fff;
 }
-
-/* button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 12px;
-    background-color: orange;
-    color: #333;
-    border: 1px solid transparent;
-}
-
-button:hover {
-    background-color: coral;
-    cursor: pointer;
-} */
-
-/* button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
-}
-
-button.switch:hover {
-    background-color: #333;
-    color: #fff;
-} */
