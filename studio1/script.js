@@ -10,9 +10,6 @@
     const moment = document.getElementById("word-moment");
     const words = preWords.querySelectorAll(".pre-word");
 
-    //test
-    const player = document.querySelector('#player');
-
     // loader
     function hideLoader() {
         loader.classList.add("hidden");
@@ -63,10 +60,6 @@
         hoverVideo.currentTime = 0;
         hoverVideo.play();
         hoverVideo.classList.add("active");
-
-        //test
-        player.currentTime = 0;
-        player.play();
     });
 
     moment.addEventListener("mouseleave", function () {
@@ -81,9 +74,6 @@
                 hoverVideo.pause(); // pauses other vid
             }
         }, 500);
-
-        //test
-        player.pause();
     });
 
 }());
