@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capstone proposal</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Darumadrop+One&family=Dekko&family=DotGothic16&family=Fredoka:wght@300..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IM+Fell+English:ital@0;1&family=Instrument+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:wght@100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Walter+Turncoat&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link href="styles.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="whole">
+        
+        <header>
+            <h1>Usability Results</h1>     
+        </header>
+
+        <div class="text">
+            <h2>Observation 1: Users didn't know what exactly to do or where they were</h2>
+            <p>
+                A couple user testers either read through all the content before clicking on anything or almost missed the game section entirely, which tells me that the main interactive part of my project isn't visually distinct enough from the rest of the content. The game might require a much clearer entry point, and anything that looks like it could be a button probably needs to actually be one, or not look interactive/clickable at all. <br><br>
+            </p>   
+
+            <h2>Observation 2: The onboarding had a few friction points</h2>
+            <p>
+                I noticed that testers ran into a few small issues in the onboarding. Those being: no way to go back if they clicked the wrong option, no way to select none of the allergens (if I want to include this), and a scrollbar appearing on the side of the onboarding page that did not scroll anywhere. I also noticed that the choices they made or got assigned for allergens were not visible after the onboarding process. Since the onboarding is the user's first experience and landing page, I want to incorporate many changes to improve it.<br><br>
+            </p>
+
+            <h2>Observation 3: The ending didn't have enough impact</h2>
+            <p>
+                This was the most consistent piece of feedback across all three user testers, after going through the game, they reported that conclusion didn't feel like a clear ending point. The data cards were there but it didn't connect back to what they just experienced (in the game) and in a meaningful way. Two of testers pointed out that they wanted more numbers to explain what occured in the game rather than just the general numbers/stats about food allergies themselves. These responses relayed that my stats/ending section needs some changes in terms of both format and framing.<br>
+            </p>
+
+        </div>
+
+        <div class="text">
+            <h2>Next Steps + Improvements</h2>
+            <ul>
+                <li>Fix the onboarding friction: back button, a none option, and suppressing the page scroll on the side of the page.</li>
+
+                <li>Keep the allergens visible throughout the whole experience, not just at the start.</li>
+
+                <li>Make the game section entry more obvious, implement a better heading, clearer instructions, and some kind of visual signal that something interactive is coming.</li>
+
+                <li>Redo the stats section. One idea that was suggested was formatting it like an actual food label, which feels very on-theme and could make the data land a lot harder than a standard chart layout.</li>
+
+                <li>Another suggestion: build out two distinct error states depending on what kind of wrong guess was made, guessing something unsafe when it was actually fine versus guessing something was safe when it could cause a reaction are very different situations and should feel different.</li>
+
+                <li>Add a restart option so users can go back and try a different allergen profile without having to refresh the page.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
