@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Capstone final</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- onboarding modal -->
+    <div class="modal-backdrop" id="modal-backdrop">
+        <div class="modal" id="modal">
+
+            <div class="step" id="step-1">
+                <p class="eyebrow">Setup</p>
+                <h2 class="modal-title">Do you have<br><em>food allergies?</em></h2>
+                <p class="modal-sub">This will shape the game and your allergen experience</p>
+                <div class="btn-row">
+                    <button class="btn-dark" id="btn-yes">Yes, I do</button>
+                    <button class="btn-outline" id="btn-no">No, I don't</button>
+                </div>
+            </div>
+
+            <div class="step hidden" id="step-2">
+                <p class="eyebrow">Select your allergens</p>
+                <h2 class="modal-title">Which ones<br><em>affect you?</em></h2>
+                <p class="modal-sub">Choose all that apply from the Big 9.</p>
+                <div class="check-grid" id="check-grid">
+                    <label class="check-item"><input type="checkbox" value="milk"> Milk</label>
+                    <label class="check-item"><input type="checkbox" value="eggs"> Eggs</label>
+                    <label class="check-item"><input type="checkbox" value="peanuts"> Peanuts</label>
+                    <label class="check-item"><input type="checkbox" value="tree nuts"> Tree nuts</label>
+                    <label class="check-item"><input type="checkbox" value="soy"> Soy</label>
+                    <label class="check-item"><input type="checkbox" value="wheat"> Wheat</label>
+                    <label class="check-item"><input type="checkbox" value="fish"> Fish</label>
+                    <label class="check-item"><input type="checkbox" value="shellfish"> Shellfish</label>
+                    <label class="check-item"><input type="checkbox" value="sesame"> Sesame</label>
+                </div>
+                <div class="btn-row">
+                    <button class="btn-dark" id="btn-confirm">Let's go</button>
+                    <button class="btn-outline" id="btn-back">Back</button>
+                </div>
+            </div>
+
+            <div class="step hidden" id="step-3">
+                <p class="eyebrow">No allergies? No problem.</p>
+                <h2 class="modal-title">We'll assign<br><em>some to you.</em></h2>
+                <p class="modal-sub">For millions of people this isn't a choice — so we randomly decided for you.</p>
+                <div class="tag-row" id="assigned-tags"></div>
+                <button class="btn-dark" id="btn-assigned-confirm">Next</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- persistent allergen bar bottom right -->
+    <div class="allergen-bar" id="allergen-bar"></div>
+
+    <!-- hero -->
+    <section class="hero">
+        <p class="eyebrow">Elly Touami</p>
+        <h1 class="hero-title">May Contain...<br><em>Allergens?</em></h1>
+        <p class="hero-sub">Play an interactive game to experience what it's like to question every ingredient when you
+            have food allergies.</p>
+        <p class="scroll-hint">Scroll to find out ↓</p>
+    </section>
+
+    <!-- game -->
+    <section class="game" id="game">
+        <div class="game-inner">
+
+            <div class="game-header">
+                <p class="eyebrow" id="round-label">Round 1 of 3</p>
+                <h2 class="game-title">Is this food safe?</h2>
+                <p class="game-sub">Using your allergens, guess if you can eat this food.</p>
+            </div>
+
+            <!-- round indicators -->
+            <div class="round-dots">
+                <div class="round-dot active" id="dot-0"></div>
+                <div class="round-dot" id="dot-1"></div>
+                <div class="round-dot" id="dot-2"></div>
+                <div class="round-dot" id="dot-3"></div>
+                <div class="round-dot" id="dot-4"></div>
+            </div>
+
+            <!-- food stage -->
+            <div class="stage" id="stage">
+
+                <div class="callout callout-left" id="callout-1">
+                    <div class="callout-box">
+                        <div class="callout-img"></div>
+                        <p class="callout-name" id="c1-name">Milk</p>
+                        <p class="callout-alias" id="c1-alias">Hidden as: casein, whey</p>
+                        <p class="callout-tag">Big 9 allergen</p>
+                    </div>
+                </div>
+
+                <div class="callout callout-right-top" id="callout-2">
+                    <div class="callout-box">
+                        <div class="callout-img"></div>
+                        <p class="callout-name" id="c2-name">Soy</p>
+                        <p class="callout-alias" id="c2-alias">Hidden as: natural flavoring</p>
+                        <p class="callout-tag">Big 9 allergen</p>
+                    </div>
+                </div>
+
+                <div class="callout callout-right-bottom" id="callout-3">
+                    <div class="callout-box">
+                        <div class="callout-img"></div>
+                        <p class="callout-name" id="c3-name">Tree nuts</p>
+                        <p class="callout-alias" id="c3-alias">Hidden as: natural flavors</p>
+                        <p class="callout-tag">Big 9 allergen</p>
+                    </div>
+                </div>
+
+                <div class="food-wrap" id="food-wrap">
+                    <div class="hotspot" id="hs-1" data-callout="callout-1" style="top:38%;left:42%"></div>
+                    <div class="hotspot" id="hs-2" data-callout="callout-2" style="top:18%;left:55%"></div>
+                    <div class="hotspot" id="hs-3" data-callout="callout-3" style="top:68%;left:50%"></div>
+                    <img src="images/matcha.png" alt="Food item" class="food-img" id="food-img" />
+                </div>
+
+                <div class="guess-btns" id="guess-btns">
+                    <button class="btn-safe" id="btn-safe">✓ Safe to eat</button>
+                    <button class="btn-unsafe" id="btn-unsafe">✗ Not safe</button>
+                </div>
+
+                <p class="hover-hint hidden" id="hover-hint">Hover the dots to reveal hidden allergens</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- stats -->
+    <section class="stats" id="stats">
+        <p class="eyebrow">Statistics</p>
+        <h2 class="stats-title">The reality of<br><em>food allergies</em></h2>
+        <div class="cards" id="cards">
+            <div class="card">
+                <p class="card-num">1 in 13</p>
+                <p class="card-text">Children in the US have a food allergy, that's approximately two per classroom.</p>
+            </div>
+            <div class="card">
+                <p class="card-num">200+</p>
+                <p class="card-text">Names that common allergens hide behind on ingredient labels.</p>
+            </div>
+            <div class="card">
+                <p class="card-num">$25B</p>
+                <p class="card-text">Annual economic cost of food allergies in the United States.</p>
+            </div>
+            <div class="card">
+                <p class="card-num">~40%</p>
+                <p class="card-text">Of people with food allergies have experienced a severe or life-threatening
+                    reaction. Often refered to as anaphylaxis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- result overlays -->
+    <div class="overlay overlay-correct" id="overlay-correct">
+        <div class="overlay-box">
+            <p class="overlay-icon">✓</p>
+            <h3>Correct!</h3>
+            <p>You identified this food correctly as it matches your allergen profile. Good catch!</p>
+            <button class="btn-dark" id="btn-continue">Continue</button>
+        </div>
+    </div>
+
+    <div class="overlay overlay-wrong" id="overlay-wrong">
+        <div class="overlay-box">
+            <p class="overlay-icon">✗</p>
+            <h3>Wrong.</h3>
+            <p>This food contains allergens from your profile. If you're lucky you'll only have some minor reactions like ichyness and redness. However, some individuals go into anaphylactic shock causing them to have issues breathing, blood pressure, and more. Hover the dots to see what's hiding inside.</p>
+            <button class="btn-light" id="btn-retry">Try again</button>
+        </div>
+    </div>
+
+    <!-- footer to finish -->
+     <!-- created by elly touami, library used GSAP, stats from -->
+
+</body>
+
+</html>
