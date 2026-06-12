@@ -6,7 +6,6 @@
 }
 /* searched online for this */
 
-/* base */
 html {
     scroll-behavior: smooth;
 }
@@ -20,7 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-/* shared type */
+/* eyebrow header */
 .eyebrow {
     font-size: 14px;
     letter-spacing: 0.1em;
@@ -589,7 +588,7 @@ em {
 }
 
 .overlay-wrong {
-    background: rgba(16, 151, 158, 0.95);
+    background: #7a1012f2;
 }
 
 .overlay-box {
@@ -642,7 +641,7 @@ em {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* shake */
+/* error shake */
 @keyframes shake {
     0% {
         transform: translateX(0);
@@ -679,4 +678,9 @@ em {
 
 .shaking {
     animation: shake 0.55s ease forwards;
+}
+
+footer {
+    font-family: "Outfit";
+    padding: 16px 48px;
 }

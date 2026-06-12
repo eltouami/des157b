@@ -11,9 +11,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- css -->
     <link rel="stylesheet" href="styles.css" />
@@ -31,6 +29,7 @@
     <div class="modal-backdrop" id="modal-backdrop">
         <div class="modal" id="modal">
 
+            <!-- onboarding -->
             <div class="step" id="step-1">
                 <p class="eyebrow">Setup</p>
                 <h2 class="modal-title">Do you have<br><em>food allergies?</em></h2>
@@ -41,10 +40,12 @@
                 </div>
             </div>
 
+            <!-- if yes -->
             <div class="step hidden" id="step-2">
                 <p class="eyebrow">Select your allergens</p>
                 <h2 class="modal-title">Which ones<br><em>affect you?</em></h2>
                 <p class="modal-sub">Choose all that apply from the Big 9.</p>
+                <!-- checkboxes -->
                 <div class="check-grid" id="check-grid">
                     <label class="check-item"><input type="checkbox" value="milk"> Milk</label>
                     <label class="check-item"><input type="checkbox" value="eggs"> Eggs</label>
@@ -62,10 +63,11 @@
                 </div>
             </div>
 
+            <!-- if no -->
             <div class="step hidden" id="step-3">
                 <p class="eyebrow">No allergies? No problem.</p>
                 <h2 class="modal-title">We'll assign<br><em>some to you.</em></h2>
-                <p class="modal-sub">For millions of people this isn't a choice — so we randomly decided for you.</p>
+                <p class="modal-sub">For millions of people this isn't a choice, so we randomly decided for you.</p>
                 <div class="tag-row" id="assigned-tags"></div>
                 <button class="btn-dark" id="btn-assigned-confirm">Next</button>
             </div>
@@ -104,7 +106,7 @@
                 <div class="round-dot" id="dot-4"></div>
             </div>
 
-            <!-- food stage -->
+            <!-- foods -->
             <div class="stage" id="stage">
 
                 <div class="callout callout-left" id="callout-1">
@@ -197,7 +199,12 @@
     </div>
 
     <!-- footer to finish -->
-     <!-- created by elly touami, library used GSAP, stats from -->
+    <!-- created by elly touami, library used GSAP, stats from CDC and FARE -->
+    <div>
+        <footer>
+                Created by Elly Touami. Library used is GSAP and the statistics are from the CDC and FARE.
+        </footer>
+    </div>
 
 </body>
 
